@@ -23,7 +23,7 @@
                     <div>
                         <label for="username" class="label-input-top">Email</label>
                     </div>
-<div class="input-container">
+<div class="input-container" id="username-border">
    <div class="input-content">
      <div class="placeholder-Icon">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -38,7 +38,7 @@
     </div>
     <input
         tabindex="1"
-        placeholder="อีเมล"
+        placeholder="Example@email.com"
         type="text"
         id="username"
         name="username"
@@ -64,7 +64,7 @@
                 <div class="input-group mt-1rem">
                     <label for="password" class="label-input-top">Password</label>
 
-                     <div class="input-container">
+                     <div class="input-container" id="password-border">
                      <div class="input-content">
                      <div class="placeholder-Icon" >
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -81,7 +81,7 @@
                     <input
                     tabindex="2"
                     type="password"
-                    placeholder="รหัสผ่าน"
+                    placeholder="Password"
                     id="password"
                     name="password"
                     class="${properties.kcInputClass!} <#if messagesPerField.existsError('username')>error</#if>"
