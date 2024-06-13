@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
-
+*{
+    font-family: "Figtree", sans-serif !important;
+    font-variant: inherit;
+}
 
 /* Patternfly CSS places a "bg-login.jpg" as the background on this ".login-pf" class.
    This clashes with the "keycloak-bg.png' background defined on the body below.
@@ -644,7 +647,8 @@ ul#kc-totp-supported-apps {
 }
 
 .card-pf {
-    box-shadow: none;
+    /* box-shadow: 0 4px #000000 ; */
+    box-shadow: 0px 4px 4px rgb(0 0 0  / 0.25);
     border: 0px;
 }
 
@@ -661,12 +665,17 @@ ul#kc-totp-supported-apps {
 }
 
 .label-input-top {
-    font-family: "IBM Plex Sans Thai" !important;
-    font-weight: 400 !important;
-    margin-block-end: -0.3rem;
+    /* font-family: "IBM Plex Sans Thai" !important; */
+    font-size: 16px !important;
+    margin-block-end: 3px;
 }
-.friend-label {
+.friend-label p{
     width: 100% !important;
+    color: #343435 !important;
+    font-size: 16px;
+    font-weight: 700 !important;
+    /* font-weight: bold !important; */
+    margin-bottom: -0.25rem;
     display: flex !important;
     justify-content: center !important;
 }
@@ -676,35 +685,59 @@ ul#kc-totp-supported-apps {
     flex-direction: column;
     /* margin-bottom: 0.5rem; */
 }
-
-input {
-    margin-top: 0rem !important;
-    /* margin-bottom: 1rem !important; */
-    padding: 0.6rem 0.75rem !important;
-    background: #FFFFFF !important;
-    border: 2px solid !important ;
-    border-radius: 10px !important;
-    border-image: linear-gradient(to right, #0056a9, #002243) 1 !important;
-    width: 20rem !important;
-    height: 2rem !important;
-    color: #000000 !important;
-    ::placeholder {
-        color: #B5B5B5;
-        font-size: 1rem !important;
-        font-weight: 400 !important;
-    }
+:root{
+    --w-btn: 300px;
+    --h-btn: 50px;
 }
-/* input::before {
-    inset: 0;
-    content: "";
-    border-radius: 10px !important;
-    background: linear-gradient(to right, #0056a9, #002243) !important;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
-    -webkit-mask-composite: xor !important;
-    mask-composite: exclude !important;
-    pointer-events: none !important;
-} */
+.input-content {
+    position: relative;
+    margin-top: 0rem !important;
+    padding: 0.6rem 0.75rem !important;
+    background: white !important;
+    border: none !important;
+    border-radius: 18px !important;
+    width: var(--w-btn)!important;
+    height: var(--h-btn) !important;
+    color: #000000 !important;
+    outline: none; /* Remove outline */
+    display : flex;
+    align-items: center;
+}
+input {
+    border: none !important;
+}
+input::placeholder {
+    color: #B5B5B5;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
 
+/* ใช้ container เพื่อทำให้ไล่สีเป็นขอบ */
+.input-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    background: linear-gradient(to right,#002243 ,#0056a9); /* ไล่สีขอบ */
+    padding: 2px; /* ความหนาของขอบ */
+}
+
+.input-container input {
+    width: calc((--w-btn)+1rem); /* คำนวณขนาดภายใน */
+    height: calc((var(--h-btn))+1rem); /* คำนวณขนาดภายใน */
+    border-radius: 8px; /* ลดขนาดของมุมโค้งให้เหมือนกับขอบที่อยู่ภายนอก */
+    /* background: white; พื้นหลังภายใน */
+    position: relative;
+    z-index: 1; /* ทำให้ input อยู่ข้างบน */
+}
+.input-container {
+    display: flex;
+    gap: 1rem ;
+}
+.placeholder-Icon {
+    padding:0.3rem 0 !important;
+    padding-right: 0.5rem !important;
+    border-right: 1px solid #343435 !important;
+}
 input:focus {
     outline: none;
 
@@ -719,18 +752,18 @@ input:focus {
 }
 
 .button-login {
+    font-weight: 700 !important;
     background: linear-gradient(to right, #0056a9 , #002243 );
-    /* Button Login */
     background-color: #0056a9;
     border: none;
     width: 300px;
     height: 60px;
     border-radius: 16px;
     font-size: 20px;
-    /* font-style: normal; */
     color: #FFF;
     display: block;
     font-weight: 500;
+    margin-bottom: 24px;
 }
 
 .forgot-password {
@@ -774,7 +807,7 @@ span {
 }
 
 .mt-1rem {
-    margin-top: 1rem;
+    margin-top: 0.25rem;
 }
 
 .error {
