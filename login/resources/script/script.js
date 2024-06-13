@@ -6,19 +6,19 @@ function validatePassword() {
   var invalid_ = document.getElementById("input-error");
 
   if (passwordValue === "" && usernameValue === "") {
-    clearError(["username", "password", "input-error"]);
+    clearError(["username-border", "password-border", "input-error"]);
     ValidateLogin(username, "Please enter your email", true);
     ValidateLogin(password, "Please enter your password", true);
     return false;
   } else {
-    clearError(["username", "password", "input-error"]);
+    clearError(["username-border", "password-border", "input-error"]);
     if (usernameValue === "") {
-      clearError(["username"]);
+      clearError(["username-border"]);
       ValidateLogin(username, "Please enter email", true);
       return false;
     }
     if (passwordValue === "") {
-      clearError(["password"]);
+      clearError(["password-border"]);
       ValidateLogin(password, "Please enter password", true);
       return false;
     }
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var password = document.getElementById("password");
   var invalid_ = document.getElementById("input-error");
   if (invalid_) {
-    clearError(["username", "password"]);
+    clearError(["username-border", "password-border"]);
     invalid_.remove();
     ValidateLogin(password, "Email or Password is incorrect");
   }
@@ -43,7 +43,7 @@ if (window.location.href.indexOf("reset-credentials") > -1) {
     var emailValidate = document.getElementById("input-error-username");
     var email = document.getElementById("username");
     if (emailValidate) {
-      clearError(["username"]);
+      clearError(["username-border"]);
       emailValidate.remove();
       ValidateLogin(email, "Please enter your email");
     }
@@ -167,7 +167,6 @@ function ValidateLogin(element, message, withWarningIcon) {
   var errorMessageSpan = document.createElement("span");
   errorMessageSpan.textContent = "\u00A0" + message;
   errorMessageSpan.classList.add("login-validate");
-  console.log(element.id);
   if (element.id == "username") {
     element = document.getElementById("username-border");
   } else {
