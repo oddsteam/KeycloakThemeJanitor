@@ -1,533 +1,551 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2024-06-14T11:35:58.215918" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2024-06-14T14:30:28.470753" rpa="false" schemaversion="5">
 <suite id="s1" name="FriendLog-Testcase" source="/Users/thunodde/Documents/KeycloakTheme/FriendLog-Testcase.robot">
 <test id="s1-t1" name="สามารถเปิดเว็บไซต์ Friendlog ได้" line="6">
 <kw name="สามารถเปิดเว็บไซต์ Friendlog ได้" owner="Keywords-FriendLog-Testcase">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:35:58.295372" level="INFO">Opening browser 'gc' to base url 'http://10.204.161.98/'.</msg>
+<msg time="2024-06-14T14:30:28.557636" level="INFO">Opening browser 'gc' to base url 'http://10.204.161.98/'.</msg>
 <arg>${url}</arg>
 <arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-14T11:35:58.295145" elapsed="1.895602"/>
+<status status="PASS" start="2024-06-14T14:30:28.557466" elapsed="2.533639"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:35:58.294617" elapsed="1.896321"/>
+<status status="PASS" start="2024-06-14T14:30:28.556910" elapsed="2.534478"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:35:58.293868" elapsed="1.897300"/>
+<status status="PASS" start="2024-06-14T14:30:28.556185" elapsed="2.535475"/>
 </test>
 <test id="s1-t2" name="กรอกข้อความลงในช่อง email ไม่ถูกต้อง password ถูกต้อง เข้าสู่ระบบไม่ได้" line="9">
 <kw name="กดกรอกข้อความลงในช่องemail ไม่ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:00.193549" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:31.094199" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:00.193278" elapsed="0.027314"/>
+<status status="PASS" start="2024-06-14T14:30:31.093914" elapsed="0.040978"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:00.220876" level="INFO">Typing text 'user' into text field '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:31.135195" level="INFO">Typing text 'user' into text field '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <arg>user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:00.220734" elapsed="0.077235"/>
+<status status="PASS" start="2024-06-14T14:30:31.135046" elapsed="0.082747"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:02.299772" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:33.219199" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:00.298138" elapsed="2.002125"/>
+<status status="PASS" start="2024-06-14T14:30:31.217957" elapsed="2.001695"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:00.193044" elapsed="2.107671"/>
+<status status="PASS" start="2024-06-14T14:30:31.093645" elapsed="2.126441"/>
 </kw>
 <kw name="กดกรอกข้อความลงในช่องpassword ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:02.303337" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:33.222282" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:02.302719" elapsed="0.039376"/>
+<status status="PASS" start="2024-06-14T14:30:33.221740" elapsed="0.042843"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:02.342517" level="INFO">Typing text '1' into text field '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:33.265340" level="INFO">Typing text '1' into text field '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <arg>${inp_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:02.342283" elapsed="0.024828"/>
+<status status="PASS" start="2024-06-14T14:30:33.265022" elapsed="0.024555"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:04.368936" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:35.292538" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:02.367242" elapsed="2.002034"/>
+<status status="PASS" start="2024-06-14T14:30:33.289699" elapsed="2.003291"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:02.301678" elapsed="2.067862"/>
+<status status="PASS" start="2024-06-14T14:30:33.220860" elapsed="2.072550"/>
 </kw>
 <kw name="กดปุ่ม login เข้าสู่ระบบ" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:04.371009" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
+<msg time="2024-06-14T14:30:35.295972" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
 <arg>//*[@id="kc-form-login"]/div/div/div[3]/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:04.370712" elapsed="0.642508"/>
+<status status="PASS" start="2024-06-14T14:30:35.295349" elapsed="0.812704"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:06.015871" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-14T14:30:37.110816" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:05.013420" elapsed="1.003092"/>
+<status status="PASS" start="2024-06-14T14:30:36.108225" elapsed="1.003120"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:04.370187" elapsed="1.646859"/>
+<status status="PASS" start="2024-06-14T14:30:35.294245" elapsed="1.817540"/>
 </kw>
 <kw name="ลบข้อมูลในช่องemail และ password" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:06.019417" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:37.114520" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:06.018823" elapsed="0.038171"/>
+<status status="PASS" start="2024-06-14T14:30:37.114082" elapsed="0.040303"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="username"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:06.057174" elapsed="0.015826"/>
+<status status="PASS" start="2024-06-14T14:30:37.154567" elapsed="0.017334"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:06.073307" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:37.172240" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:06.073161" elapsed="0.022476"/>
+<status status="PASS" start="2024-06-14T14:30:37.172097" elapsed="0.022802"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:06.095764" elapsed="0.011998"/>
+<status status="PASS" start="2024-06-14T14:30:37.195026" elapsed="0.011968"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:08.108756" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:39.208156" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:06.107865" elapsed="2.001279"/>
+<status status="PASS" start="2024-06-14T14:30:37.207093" elapsed="2.001484"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:06.017965" elapsed="2.091573"/>
+<status status="PASS" start="2024-06-14T14:30:37.112751" elapsed="2.096220"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:00.191386" elapsed="7.918741"/>
+<status status="PASS" start="2024-06-14T14:30:31.091899" elapsed="8.117665"/>
 </test>
 <test id="s1-t3" name="กรอกข้อความลงในช่อง email ถูกต้อง password ไม่ถูกต้อง เข้าสู่ระบบไม่ได้" line="15">
 <kw name="กดกรอกข้อความลงในช่องemail ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:08.117106" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:39.216217" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:08.116522" elapsed="0.032629"/>
+<status status="PASS" start="2024-06-14T14:30:39.215741" elapsed="0.033595"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:08.149690" level="INFO">Typing text 'userTest' into text field '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:39.249846" level="INFO">Typing text 'userTest' into text field '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <arg>${inp_email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:08.149404" elapsed="0.035302"/>
+<status status="PASS" start="2024-06-14T14:30:39.249577" elapsed="0.038751"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:10.186503" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:41.290410" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:08.184854" elapsed="2.002123"/>
+<status status="PASS" start="2024-06-14T14:30:39.288479" elapsed="2.002387"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:08.115715" elapsed="2.071766"/>
+<status status="PASS" start="2024-06-14T14:30:39.214960" elapsed="2.076301"/>
 </kw>
 <kw name="กดกรอกข้อความลงในช่องpassword ไม่ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:10.190100" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:41.293535" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:10.189443" elapsed="0.038221"/>
+<status status="PASS" start="2024-06-14T14:30:41.292970" elapsed="0.037439"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:10.228107" level="INFO">Typing text '134' into text field '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:41.330848" level="INFO">Typing text '134' into text field '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <arg>134</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:10.227881" elapsed="0.025819"/>
+<status status="PASS" start="2024-06-14T14:30:41.330622" elapsed="0.026327"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:12.255063" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:43.358254" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:10.253981" elapsed="2.001607"/>
+<status status="PASS" start="2024-06-14T14:30:41.357137" elapsed="2.001750"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:10.188441" elapsed="2.067721"/>
+<status status="PASS" start="2024-06-14T14:30:41.292093" elapsed="2.067360"/>
 </kw>
 <kw name="กดปุ่ม login เข้าสู่ระบบ" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:12.259043" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
+<msg time="2024-06-14T14:30:43.362500" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
 <arg>//*[@id="kc-form-login"]/div/div/div[3]/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:12.258477" elapsed="0.507504"/>
+<status status="PASS" start="2024-06-14T14:30:43.361941" elapsed="0.622958"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:13.767337" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-14T14:30:44.987691" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:12.766538" elapsed="1.001426"/>
+<status status="PASS" start="2024-06-14T14:30:43.985126" elapsed="1.003207"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:12.257245" elapsed="1.511324"/>
+<status status="PASS" start="2024-06-14T14:30:43.360578" elapsed="1.628314"/>
 </kw>
 <kw name="ลบข้อมูลในช่องemail และ password" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:13.771517" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:44.992158" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:13.771000" elapsed="0.037413"/>
+<status status="PASS" start="2024-06-14T14:30:44.991348" elapsed="0.032697"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="username"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:13.808648" elapsed="0.016212"/>
+<status status="PASS" start="2024-06-14T14:30:45.024292" elapsed="0.015100"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:13.825130" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:45.039646" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:13.824991" elapsed="0.019495"/>
+<status status="PASS" start="2024-06-14T14:30:45.039520" elapsed="0.025053"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:13.844612" elapsed="0.012081"/>
+<status status="PASS" start="2024-06-14T14:30:45.064690" elapsed="0.011561"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:15.857744" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:47.078554" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:13.856799" elapsed="2.001438"/>
+<status status="PASS" start="2024-06-14T14:30:45.076347" elapsed="2.002833"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:13.769760" elapsed="2.088896"/>
+<status status="PASS" start="2024-06-14T14:30:44.990007" elapsed="2.089758"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:08.110727" elapsed="7.748585"/>
+<status status="PASS" start="2024-06-14T14:30:39.210178" elapsed="7.870407"/>
 </test>
 <test id="s1-t4" name="กรอกข้อความลงในช่อง email และ password ไม่ถูกต้อง เข้าสู่ระบบไม่ได้" line="20">
 <kw name="กดกรอกข้อความลงในช่องemail ไม่ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:15.865194" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:47.086736" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:15.864677" elapsed="0.033928"/>
+<status status="PASS" start="2024-06-14T14:30:47.086217" elapsed="0.033726"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:15.899118" level="INFO">Typing text 'user' into text field '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:47.120422" level="INFO">Typing text 'user' into text field '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <arg>user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:15.898883" elapsed="0.031122"/>
+<status status="PASS" start="2024-06-14T14:30:47.120178" elapsed="0.045148"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:17.932586" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:49.167464" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:15.930432" elapsed="2.002335"/>
+<status status="PASS" start="2024-06-14T14:30:47.165496" elapsed="2.002538"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:15.863911" elapsed="2.069053"/>
+<status status="PASS" start="2024-06-14T14:30:47.085443" elapsed="2.082959"/>
 </kw>
 <kw name="กดกรอกข้อความลงในช่องpassword ไม่ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:17.933780" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:49.170575" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:17.933584" elapsed="0.027720"/>
+<status status="PASS" start="2024-06-14T14:30:49.170040" elapsed="0.039148"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:17.961617" level="INFO">Typing text '134' into text field '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:49.209634" level="INFO">Typing text '134' into text field '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <arg>134</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:17.961454" elapsed="0.022289"/>
+<status status="PASS" start="2024-06-14T14:30:49.209412" elapsed="0.025713"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:19.985434" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:51.236811" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:17.983850" elapsed="2.001989"/>
+<status status="PASS" start="2024-06-14T14:30:49.235265" elapsed="2.001955"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:17.933261" elapsed="2.052951"/>
+<status status="PASS" start="2024-06-14T14:30:49.169178" elapsed="2.068416"/>
 </kw>
 <kw name="กดปุ่ม login เข้าสู่ระบบ" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:19.988977" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
+<msg time="2024-06-14T14:30:51.239710" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
 <arg>//*[@id="kc-form-login"]/div/div/div[3]/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:19.988134" elapsed="0.547909"/>
+<status status="PASS" start="2024-06-14T14:30:51.239214" elapsed="0.630380"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:21.538096" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-14T14:30:52.871738" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:20.536266" elapsed="1.002425"/>
+<status status="PASS" start="2024-06-14T14:30:51.869868" elapsed="1.002353"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:19.986978" elapsed="1.552442"/>
+<status status="PASS" start="2024-06-14T14:30:51.238421" elapsed="1.634305"/>
 </kw>
 <kw name="ลบข้อมูลในช่องemail และ password" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:21.542360" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:52.876094" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:21.541823" elapsed="0.037447"/>
+<status status="PASS" start="2024-06-14T14:30:52.875243" elapsed="0.037648"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="username"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:21.579480" elapsed="0.023964"/>
+<status status="PASS" start="2024-06-14T14:30:52.913102" elapsed="0.025485"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:21.603736" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:52.938970" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:21.603588" elapsed="0.017860"/>
+<status status="PASS" start="2024-06-14T14:30:52.938792" elapsed="0.018774"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:21.621597" elapsed="0.012050"/>
+<status status="PASS" start="2024-06-14T14:30:52.957712" elapsed="0.011930"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:23.636466" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:54.971065" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:21.633751" elapsed="2.003344"/>
+<status status="PASS" start="2024-06-14T14:30:52.969747" elapsed="2.001901"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:21.540623" elapsed="2.097072"/>
+<status status="PASS" start="2024-06-14T14:30:52.873869" elapsed="2.098243"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:15.859973" elapsed="7.778539"/>
+<status status="PASS" start="2024-06-14T14:30:47.081381" elapsed="7.891410"/>
 </test>
 <test id="s1-t5" name="กรอกข้อความลงในช่อง email แต่ไม่กรอก password เข้าสู่ระบบไม่ได้" line="26">
 <kw name="กดกรอกข้อความลงในช่องemail ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:23.644649" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:54.980162" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:23.644110" elapsed="0.036351"/>
+<status status="PASS" start="2024-06-14T14:30:54.979675" elapsed="0.038221"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:23.681509" level="INFO">Typing text 'userTest' into text field '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:55.018633" level="INFO">Typing text 'userTest' into text field '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <arg>${inp_email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:23.681132" elapsed="0.027216"/>
+<status status="PASS" start="2024-06-14T14:30:55.018257" elapsed="0.030369"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:25.709904" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:30:57.049776" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:23.708495" elapsed="2.001998"/>
+<status status="PASS" start="2024-06-14T14:30:55.048843" elapsed="2.001453"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:23.643395" elapsed="2.067697"/>
+<status status="PASS" start="2024-06-14T14:30:54.978619" elapsed="2.072080"/>
 </kw>
 <kw name="กดปุ่ม login เข้าสู่ระบบ" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:25.713896" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
+<msg time="2024-06-14T14:30:57.052916" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
 <arg>//*[@id="kc-form-login"]/div/div/div[3]/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:25.713291" elapsed="0.032205"/>
+<status status="PASS" start="2024-06-14T14:30:57.052369" elapsed="0.031689"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:26.747144" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-14T14:30:58.084818" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:25.745774" elapsed="1.001808"/>
+<status status="PASS" start="2024-06-14T14:30:57.084268" elapsed="1.000997"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:25.712208" elapsed="1.035878"/>
+<status status="PASS" start="2024-06-14T14:30:57.051463" elapsed="1.034239"/>
 </kw>
 <kw name="ลบข้อมูลในช่องemail และ password" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:26.750985" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:30:58.088059" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:26.750480" elapsed="0.031643"/>
+<status status="PASS" start="2024-06-14T14:30:58.087480" elapsed="0.033676"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="username"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:26.782329" elapsed="0.015941"/>
+<status status="PASS" start="2024-06-14T14:30:58.121384" elapsed="0.016145"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:26.798542" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:30:58.137806" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:26.798405" elapsed="0.018252"/>
+<status status="PASS" start="2024-06-14T14:30:58.137667" elapsed="0.017781"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:26.816787" elapsed="0.011845"/>
+<status status="PASS" start="2024-06-14T14:30:58.155580" elapsed="0.011640"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:28.830016" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:31:00.167880" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:26.828725" elapsed="2.001582"/>
+<status status="PASS" start="2024-06-14T14:30:58.167320" elapsed="2.001168"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:26.749206" elapsed="2.081423"/>
+<status status="PASS" start="2024-06-14T14:30:58.086565" elapsed="2.082491"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:23.639173" elapsed="5.191997"/>
+<status status="PASS" start="2024-06-14T14:30:54.973698" elapsed="5.196205"/>
 </test>
 <test id="s1-t6" name="ไม่กรอกข้อความลงในช่อง email แต่กรอก password เข้าสู่ระบบไม่ได้" line="31">
 <kw name="กดกรอกข้อความลงในช่องpassword ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:28.836810" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:31:00.176591" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:28.836481" elapsed="0.030260"/>
+<status status="PASS" start="2024-06-14T14:31:00.176086" elapsed="0.033948"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:28.867195" level="INFO">Typing text '1' into text field '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:31:00.210563" level="INFO">Typing text '1' into text field '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <arg>${inp_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:28.866950" elapsed="0.027008"/>
+<status status="PASS" start="2024-06-14T14:31:00.210263" elapsed="0.035692"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:30.894928" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:31:02.246637" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:28.894101" elapsed="2.001315"/>
+<status status="PASS" start="2024-06-14T14:31:00.246081" elapsed="2.001048"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:28.835983" elapsed="2.059950"/>
+<status status="PASS" start="2024-06-14T14:31:00.175057" elapsed="2.072567"/>
 </kw>
 <kw name="กดปุ่ม login เข้าสู่ระบบ" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:30.898612" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
+<msg time="2024-06-14T14:31:02.251077" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
 <arg>//*[@id="kc-form-login"]/div/div/div[3]/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:30.897979" elapsed="0.041781"/>
+<status status="PASS" start="2024-06-14T14:31:02.250186" elapsed="0.029629"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:31.941080" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-14T14:31:03.281364" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:30.940107" elapsed="1.001518"/>
+<status status="PASS" start="2024-06-14T14:31:02.280056" elapsed="1.001591"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:30.896931" elapsed="1.045204"/>
+<status status="PASS" start="2024-06-14T14:31:02.248807" elapsed="1.033136"/>
 </kw>
 <kw name="ลบข้อมูลในช่องemail และ password" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:31.944986" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:31:03.283818" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:31.944414" elapsed="0.039602"/>
+<status status="PASS" start="2024-06-14T14:31:03.283455" elapsed="0.030739"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="username"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:31.984232" elapsed="0.016519"/>
+<status status="PASS" start="2024-06-14T14:31:03.314436" elapsed="0.018504"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:32.001033" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:31:03.333203" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:32.000889" elapsed="0.018268"/>
+<status status="PASS" start="2024-06-14T14:31:03.333071" elapsed="0.018951"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:32.019283" elapsed="0.012323"/>
+<status status="PASS" start="2024-06-14T14:31:03.352145" elapsed="0.012989"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:34.034197" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:31:05.367570" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:32.031721" elapsed="2.002983"/>
+<status status="PASS" start="2024-06-14T14:31:03.365241" elapsed="2.002948"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:31.943216" elapsed="2.092030"/>
+<status status="PASS" start="2024-06-14T14:31:03.282623" elapsed="2.086115"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:28.831887" elapsed="5.204171"/>
+<status status="PASS" start="2024-06-14T14:31:00.170899" elapsed="5.198666"/>
 </test>
 <test id="s1-t7" name="ไม่กรอกข้อความลงในช่อง email และ password เข้าสู่ระบบไม่ได้" line="36">
 <kw name="กดปุ่ม login เข้าสู่ระบบ" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:34.041644" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
+<msg time="2024-06-14T14:31:05.375608" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
 <arg>//*[@id="kc-form-login"]/div/div/div[3]/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:34.041082" elapsed="0.031225"/>
+<status status="PASS" start="2024-06-14T14:31:05.375119" elapsed="0.030801"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:35.073941" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-14T14:31:06.408797" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:34.072594" elapsed="1.001498"/>
+<status status="PASS" start="2024-06-14T14:31:05.406264" elapsed="1.003008"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:34.040310" elapsed="1.033933"/>
+<status status="PASS" start="2024-06-14T14:31:05.374326" elapsed="1.035670"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:34.036672" elapsed="1.037772"/>
+<status status="PASS" start="2024-06-14T14:31:05.370503" elapsed="1.040330"/>
 </test>
 <test id="s1-t8" name="กรอกข้อความลงในช่อง email และ password ถูกต้อง เข้าสู่ระบบได้" line="39">
 <kw name="กดกรอกข้อความลงในช่องemail ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:35.076742" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:31:06.416906" level="INFO">Clicking element '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:35.076578" elapsed="0.024431"/>
+<status status="PASS" start="2024-06-14T14:31:06.416337" elapsed="0.048524"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:35.101332" level="INFO">Typing text 'userTest' into text field '//*[@id="username"]'.</msg>
+<msg time="2024-06-14T14:31:06.465357" level="INFO">Typing text 'userTest' into text field '//*[@id="username"]'.</msg>
 <arg>//*[@id="username"]</arg>
 <arg>${inp_email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:35.101148" elapsed="0.025165"/>
+<status status="PASS" start="2024-06-14T14:31:06.465097" elapsed="0.027334"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:37.127578" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:31:08.494492" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:35.126461" elapsed="2.001285"/>
+<status status="PASS" start="2024-06-14T14:31:06.492597" elapsed="2.002078"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:35.076333" elapsed="2.051599"/>
+<status status="PASS" start="2024-06-14T14:31:06.415617" elapsed="2.079230"/>
 </kw>
 <kw name="กดกรอกข้อความลงในช่องpassword ถูกต้อง" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:37.129118" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:31:08.495767" level="INFO">Clicking element '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:37.128825" elapsed="0.028130"/>
+<status status="PASS" start="2024-06-14T14:31:08.495570" elapsed="0.022566"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:37.157321" level="INFO">Typing text '1' into text field '//*[@id="password"]'.</msg>
+<msg time="2024-06-14T14:31:08.518526" level="INFO">Typing text '1' into text field '//*[@id="password"]'.</msg>
 <arg>//*[@id="password"]</arg>
 <arg>${inp_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:37.157111" elapsed="0.024191"/>
+<status status="PASS" start="2024-06-14T14:31:08.518309" elapsed="0.022426"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:39.182182" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-06-14T14:31:10.543501" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:37.181425" elapsed="2.001169"/>
+<status status="PASS" start="2024-06-14T14:31:08.540853" elapsed="2.003224"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:37.128352" elapsed="2.054672"/>
+<status status="PASS" start="2024-06-14T14:31:08.495224" elapsed="2.049389"/>
 </kw>
 <kw name="กดปุ่ม login เข้าสู่ระบบ" owner="Keywords-FriendLog-Testcase">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-14T11:36:39.185438" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
+<msg time="2024-06-14T14:31:10.547219" level="INFO">Clicking element '//*[@id="kc-form-login"]/div/div/div[3]/div/button'.</msg>
 <arg>//*[@id="kc-form-login"]/div/div/div[3]/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-14T11:36:39.184834" elapsed="0.519341"/>
+<status status="PASS" start="2024-06-14T14:31:10.546635" elapsed="2.075898"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-14T11:36:40.708010" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-14T14:31:13.623963" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-14T11:36:39.705359" elapsed="1.003266"/>
+<status status="PASS" start="2024-06-14T14:31:12.622690" elapsed="1.001480"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:39.183851" elapsed="1.525380"/>
+<status status="PASS" start="2024-06-14T14:31:10.545667" elapsed="3.078692"/>
 </kw>
-<status status="PASS" start="2024-06-14T11:36:35.074673" elapsed="5.635348"/>
+<status status="PASS" start="2024-06-14T14:31:06.411734" elapsed="7.212931"/>
 </test>
-<status status="PASS" start="2024-06-14T11:35:58.216497" elapsed="42.494785"/>
+<test id="s1-t9" name="เข้าสู่หน้าเว็บไซต์ Friendlog กด logout ออกจากระบบได้" line="44">
+<kw name="กดปุ่ม logout ออกจากระบบ" owner="Keywords-FriendLog-Testcase">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-14T14:31:13.627957" level="INFO">Clicking element '//html/body/div[1]/div[1]/div/a'.</msg>
+<arg>//html/body/div[1]/div[1]/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-14T14:31:13.627685" elapsed="0.040565"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-14T14:31:14.669781" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-14T14:31:13.668393" elapsed="1.001516"/>
+</kw>
+<status status="PASS" start="2024-06-14T14:31:13.627282" elapsed="1.042754"/>
+</kw>
+<status status="PASS" start="2024-06-14T14:31:13.625017" elapsed="1.045354"/>
+</test>
+<status status="PASS" start="2024-06-14T14:30:28.471449" elapsed="46.199427"/>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="0" skip="0">All Tests</stat>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="8" fail="0" skip="0" id="s1" name="FriendLog-Testcase">FriendLog-Testcase</stat>
+<stat pass="9" fail="0" skip="0" id="s1" name="FriendLog-Testcase">FriendLog-Testcase</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-06-14T11:35:58.227652" level="WARN">Error in file '/Users/thunodde/Documents/KeycloakTheme/Keywords-FriendLog-Testcase.robot' on line 4: Singular section headers like '*** Variable ***' are deprecated. Use plural format like '*** Variables ***' instead.</msg>
+<msg time="2024-06-14T14:30:28.482061" level="WARN">Error in file '/Users/thunodde/Documents/KeycloakTheme/Keywords-FriendLog-Testcase.robot' on line 4: Singular section headers like '*** Variable ***' are deprecated. Use plural format like '*** Variables ***' instead.</msg>
 </errors>
 </robot>

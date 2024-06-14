@@ -38,12 +38,8 @@ ${inp_password}           1
 กดปุ่ม login เข้าสู่ระบบ
     Click Element  //*[@id="kc-form-login"]/div/div/div[3]/div/button
     Sleep  1s
-# กดปุ่มค้นหาด้วยคำว่า "Odds" ได้
-#     Input Text  name=q  ${inp_text} 
 
-# กดปุ่มค้นหา
-#     Press Key    name=q    \\13
-    
-# เช็คคำว่า "Odds" อยู่ในหน้าเว็บไซต์
-#     ${text} =  Get Text    name=q
-#     Current Frame Should Contain    ${text}    odds
+กดปุ่ม logout ออกจากระบบ
+
+    Click Element    //html/body/div[1]/div[1]/div/a
+    Sleep  1s
