@@ -137,31 +137,31 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 //for setpassword
-// function showErrorMessage(element, message, withWarningIcon) {
-//   var errorMessageSpan = document.createElement("span");
-//   errorMessageSpan.textContent = message;
-//   errorMessageSpan.textContent = "\u00A0" + message;
-//   errorMessageSpan.classList.add(
-//     "pf-c-form__helper-text",
-//     "pf-m-error",
-//     "required",
-//     "kc-feedback-text"
-//   );
-//   if (withWarningIcon) {
-//     var warningIcon = document.createElement("i");
-//     warningIcon.classList.add("fas", "fa-exclamation-circle", "error-icon");
-//     errorMessageSpan.insertBefore(warningIcon, errorMessageSpan.firstChild);
-//   }
-//   element.insertAdjacentElement("afterend", errorMessageSpan);
-// }
-// function clearError(elementIds) {
-//   elementIds.forEach(function (id) {
-//     var element = document.getElementById(id);
-//     if (element && element.nextElementSibling) {
-//       element.parentNode.removeChild(element.nextElementSibling);
-//     }
-//   });
-// }
+function showErrorMessage(element, message, withWarningIcon) {
+  var errorMessageSpan = document.createElement("span");
+  errorMessageSpan.textContent = message;
+  errorMessageSpan.textContent = "\u00A0" + message;
+  errorMessageSpan.classList.add(
+    "pf-c-form__helper-text",
+    "pf-m-error",
+    "required",
+    "kc-feedback-text"
+  );
+  if (withWarningIcon) {
+    var warningIcon = document.createElement("i");
+    warningIcon.classList.add("fas", "fa-exclamation-circle", "error-icon");
+    errorMessageSpan.insertBefore(warningIcon, errorMessageSpan.firstChild);
+  }
+  element.insertAdjacentElement("afterend", errorMessageSpan);
+}
+function clearError(elementIds) {
+  elementIds.forEach(function (id) {
+    var element = document.getElementById(id);
+    if (element && element.nextElementSibling) {
+      element.parentNode.removeChild(element.nextElementSibling);
+    }
+  });
+}
 // for login
 function ValidateLogin(element, message, withWarningIcon) {
   var errorMessageSpan = document.createElement("span");
