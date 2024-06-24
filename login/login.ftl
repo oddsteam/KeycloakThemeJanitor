@@ -116,15 +116,59 @@
         </div>
     </form>
 
+
+    <div id="loading-popup" style="display: none;">
+        <div class="loading-spinner"></div>
+    </div>
+
+
 </#if>
 </@layout.registrationLayout>
 
 <script>
     document.getElementById('kc-form-login').addEventListener('submit', function(event) {
-        if (!validatePassword()) {
-            event.preventDefault();
-        }
-    });
+        event.preventDefault();
+        var form = this;
 
+        document.getElementById('loading-popup').style.display = 'block';
+
+        setTimeout(function() {
+            form.submit();
+        }, 800);
+    });
 </script>
+
+<style>
+    #loading-popup {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-size: 2em;
+        flex-direction: column; 
+    }
+
+    .loading-spinner {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 25% 0 0 48%;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
 
