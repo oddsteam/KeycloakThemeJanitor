@@ -131,10 +131,18 @@
         var form = this;
 
         document.getElementById('loading-popup').style.display = 'block';
+        function checkLoginStatus() {
+            var loginSuccessful = Math.random() > 0.5;
 
-        setTimeout(function() {
-            form.submit();
-        }, 800);
+            if (loginSuccessful) {
+                form.submit();
+            } else {
+                setTimeout(checkLoginStatus, 800); // Re-check after 800ms
+            }
+        }
+
+        // Start checking the login status
+        checkLoginStatus();
     });
 </script>
 
