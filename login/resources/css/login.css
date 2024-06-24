@@ -468,6 +468,7 @@ ul#kc-totp-supported-apps {
 .form-horizontal .form-group {
     margin: 1rem 0 0 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -999,4 +1000,19 @@ img.icon-back {
 /* when invalid user */
 .login-failed {
     display: none;
+}
+
+.reset-new-password {
+    font-family: "IBM Plex Sans Thai" !important;
+    font-size: 1.5rem;
+    font-style: bold;
+
+    .set-password-label {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    label {
+        font-size: 0.875rem;
+    }
 }

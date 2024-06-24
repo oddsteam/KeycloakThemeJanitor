@@ -58,11 +58,11 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     passwordLabel.classList.add("set-label-input");
 
     var header = document.createElement("div");
-    header.textContent = "set password";
-    header.classList.add("set-password-header");
+    header.textContent = "Set new password";
+    header.classList.add("reset-new-password");
 
     var Label = document.createElement("div");
-    Label.textContent = "ตั้งรหัสผ่านและยืนยันรหัสผ่าน";
+    Label.textContent = "";
     Label.classList.add("set-password-label");
 
     header.appendChild(Label);
@@ -89,6 +89,7 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
   document.addEventListener("DOMContentLoaded", function (event) {
     var submitButton = document.querySelector('input[type="submit"]');
     submitButton.value = "ถัดไป";
+    submitButton.classList.add("button-login")
     submitButton.addEventListener("click", validatePassword_UpdatePassword);
     var form = document.getElementById("kc-passwd-update-form");
     if (form) {
