@@ -454,7 +454,21 @@ ul#kc-totp-supported-apps {
 }
 
 #kc-form-buttons {
-    margin-top: 20px;
+    margin-top: 2rem;
+    display: flex;
+    width: var(--b-btn);
+}
+
+.send-button-layout {
+    display: flex !important;
+    justify-content: center !important;
+
+}
+
+.form-horizontal .form-group {
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
 }
 
 .login-pf-page .login-pf-brand {
@@ -729,10 +743,17 @@ input::placeholder {
     position: relative;
     z-index: 1; /* ทำให้ input อยู่ข้างบน */
 }
-.input-container {
+
+.reset-password-content {
     display: flex;
-    gap: 1rem ;
+    flex-direction: column;
+    align-items: center;
 }
+/* .input-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem ;
+} */
 .placeholder-Icon {
     padding:0.3rem 0 !important;
     padding-right: 0.5rem !important;
@@ -745,7 +766,7 @@ input:focus {
 }
 
 .button-group {
-    margin-top: 3.1rem;
+    /* margin-top: 2rem; */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -763,7 +784,7 @@ input:focus {
     color: #FFF;
     display: block;
     font-weight: 500;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 .forgot-password {
@@ -777,7 +798,7 @@ input:focus {
     background-color: #FFF;
     color: #0056a9;
     border: none;
-    margin-top: 1.1rem;
+    margin-top: 0.8rem;
     font-size: 0.8rem;
     font-style: normal;
     width: 10.3rem;
@@ -815,7 +836,6 @@ span {
 } */
 
 a {
-    font-family: "IBM Plex Sans Thai" !important;
     color: #0056a9;
 }
 
@@ -862,8 +882,10 @@ a#kc-current-locale-link {
 
 .forgot-password-group {
     display: flex;
-    margin-top: 2rem !important;
-    justify-content: center;
+    margin-top: 0.5rem !important;
+    margin-bottom: 2rem;
+    width: var(--b-btn);
+    justify-content: start;
     
 
     /* :hover {
@@ -919,7 +941,7 @@ a#kc-current-locale-link {
 .navbar {
     position: relative;
     min-height: 50px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: 1px solid transparent;
 }
 
@@ -948,8 +970,10 @@ img.icon-back {
 
 /* forgot password card */
 .forgot-password-section {
-    top: 6px;
-    text-indent: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    /* text-indent: 1.2rem; */
 
     .section-header {
         font-size: 1.5rem;

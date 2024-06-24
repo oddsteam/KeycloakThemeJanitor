@@ -97,19 +97,20 @@
                 </span>
                 <div class="button-group">
                     <div>
-                    <button type="submit" class="button-login">LOGIN</button>
+                    
                     <#--  ${msg("doLogIn")}  -->
                         <#if realm.resetPasswordAllowed>
                         <div class="forgot-password-group">
-                            <div class="label-forgot">
-                                  ลืมรหัสผ่านใช่ไหม?
-                            </div>
+                            <#--  <div class="label-forgot">
+                                  Forgot password?
+                            </div>  -->
                             <div>
                                 <a class="button-forgot-password" tabindex="5" href="${url.loginResetCredentialsUrl}">
-                               รีเซ็ตรหัสผ่าน</a>
+                               Forgot password?</a>
                             </div>
                         </div>
                         </#if>
+                        <button type="submit" class="button-login">LOGIN</button>
                     </div>
                 </div>
             </div>
