@@ -121,6 +121,10 @@ a#kc-current-locale-link::after {
     height: 10px;
 }
 
+.content {
+    padding: 0px 20px;
+}
+
 .login-pf .container {
     padding-top: 40px;
 }
@@ -189,6 +193,9 @@ div.kc-logo-text span {
 
 #kc-content-wrapper {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #kc-form-wrapper {
@@ -544,10 +551,10 @@ ul#kc-totp-supported-apps {
 /*phone*/
 @media (max-width: 767px) {
     .login-pf-page .card-pf {
-        max-width: none;
+        /* max-width: none; */
         margin-left: 0;
         margin-right: 0;
-        padding-top: 0;
+        padding: 20px 10px 30px 10px;
         border-top: 0;
         box-shadow: 0 0;
     }
@@ -944,6 +951,9 @@ a#kc-current-locale-link {
     min-height: 50px;
     margin-bottom: 1rem;
     border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .nav-back {
@@ -953,6 +963,8 @@ a#kc-current-locale-link {
     color: #0056a9;
     display: flex !important;
     align-items: center;
+    justify-content: start;
+    width: var(--w-btn);
 }
 
 img.icon-back {
@@ -973,7 +985,7 @@ img.icon-back {
 .forgot-password-section {
     display: flex;
     flex-direction: column;
-    padding: 0 0.5rem;
+    width: var(--w-btn);
     /* text-indent: 1.2rem; */
 
     .section-header {
@@ -985,7 +997,7 @@ img.icon-back {
 
     .section-caption {
         font-weight: 400;
-        margin-top: 0.75rem;
+        margin-top: 1rem;
         font-size: 1rem;
         color: #505050;
         margin-bottom: 2rem;
