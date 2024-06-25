@@ -54,41 +54,43 @@ if (window.location.href.indexOf("reset-credentials") > -1) {
 else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
   document.addEventListener("DOMContentLoaded", function () {
     var passwordLabel = document.querySelector('label[for="password-new"]');
-    passwordLabel.textContent = "password";
-    passwordLabel.classList.add("set-label-input");
-
+    
     var header = document.createElement("div");
     header.textContent = "Set new password";
     header.classList.add("reset-new-password");
-
+    
     var Label = document.createElement("div");
-    Label.textContent = "";
+    Label.textContent = "Enter a new password below to reset your password";
     Label.classList.add("set-password-label");
-
+    
     header.appendChild(Label);
-
+    
     passwordLabel.insertAdjacentElement("beforebegin", header);
     var confirmPasswordLabel = document.querySelector(
       'label[for="password-confirm"]'
-    );
-    confirmPasswordLabel.textContent = "ยืนยันรหัสผ่าน";
-    confirmPasswordLabel.classList.add("set-label-input");
+      );
+
+      passwordLabel.textContent = "New Password";
+      passwordLabel.classList.add("new-password-label-input");
+
+      confirmPasswordLabel.textContent = "Confirm Password";
+      confirmPasswordLabel.classList.add("new-password-label-input");
   });
   // set placeholder
 
   document.addEventListener("DOMContentLoaded", function () {
-    var passwordInput = document.getElementById("password-new");
+    var passwordInput = document.getElementById("password-new")
     var password_confirmInput = document.getElementById("password-confirm");
 
     if (passwordInput && password_confirmInput) {
-      passwordInput.placeholder = "รหัสผ่าน";
-      password_confirmInput.placeholder = "ยืนยันรหัสผ่าน";
+      passwordInput.placeholder = "Password";
+      password_confirmInput.placeholder = "Password";
     }
   });
 
   document.addEventListener("DOMContentLoaded", function (event) {
     var submitButton = document.querySelector('input[type="submit"]');
-    submitButton.value = "ถัดไป";
+    submitButton.value = "CHANGE PASSWORD";
     submitButton.classList.add("button-login")
     submitButton.addEventListener("click", validatePassword_UpdatePassword);
     var form = document.getElementById("kc-passwd-update-form");
@@ -105,6 +107,7 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
 function validatePassword_UpdatePassword(event) {
   var password = document.getElementById("password-new");
   var passwordConfirm = document.getElementById("password-confirm");
+
   var passwordValue = password.value.trim();
   var passwordConfirmValue = passwordConfirm.value.trim();
   var errorMessage = "";
@@ -112,23 +115,23 @@ function validatePassword_UpdatePassword(event) {
   if (passwordValue === "" || passwordConfirmValue === "") {
     clearError(["password-new", "password-confirm"]);
     if (passwordValue === "") {
-      errorMessage = "กรุณากรอกรหัสผ่าน";
+      errorMessage = "Please enter your password";
       showErrorMessage(password, errorMessage, true);
     }
     if (passwordConfirmValue === "") {
-      errorMessage = "กรุณากรอกยืนยันรหัสผ่าน";
+      errorMessage = "Please confirm your password";
       showErrorMessage(passwordConfirm, errorMessage, true);
     }
     return false;
   } else if (passwordValue !== passwordConfirmValue) {
     clearError(["password-new", "password-confirm"]);
-    errorMessage = "รหัสผ่านและยืนยันรหัสผ่านไม่ตรงกัน";
+    errorMessage = "Passwords are not matched";
     showErrorMessage(passwordConfirm, errorMessage, true);
     return false;
   } else if (!formater(passwordValue) || !formater(passwordConfirmValue)) {
     clearError(["password-new", "password-confirm"]);
     errorMessage =
-      "รหัสผ่านต้องเป็นภาษาอังกฤษและมีความยาวอย่างน้อย 8 ตัวอักษร ตัวพิมพ์ใหญ่หนึ่งตัว, ตัวพิมพ์เล็กหนึ่งตัว และตัวเลขหนึ่งตัว";
+      "Password must be in English and have at least 8 letters, 1 uppercase, 1 lowercase, and 1 number";
     showErrorMessage(passwordConfirm, errorMessage, true);
     return false;
   } else {

@@ -907,20 +907,6 @@ a#kc-current-locale-link {
     }
 }
 
-.set-password-header {
-    font-family: "IBM Plex Sans Thai" !important;
-    font-size: 1.5rem;
-    font-style: bold;
-
-    .set-password-label {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    label {
-        font-size: 0.875rem;
-    }
-}
 
 .pf-c-input-group>:focus,
 .pf-c-input-group>:focus-within {
@@ -935,7 +921,7 @@ a#kc-current-locale-link {
 }
 
 .pf-c-input-group {
-    margin-bottom: 1rem !important;
+    /* margin-bottom: 1rem !important; */
 }
 
 .pf-c-form__helper-text.pf-m-error {
@@ -1014,17 +1000,62 @@ img.icon-back {
     display: none;
 }
 
+
+/* -------- Set new password---------- */
 .reset-new-password {
-    font-family: "IBM Plex Sans Thai" !important;
+    text-align: center;
     font-size: 1.5rem;
-    font-style: bold;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 
-    .set-password-label {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
+        .set-password-label {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
 
-    label {
-        font-size: 0.875rem;
-    }
+        label {
+            font-size: 0.875rem;
+        }
+
+}
+
+.new-password-label-input{
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.pf-c-input-group:has(#password-new) {
+    /* position: relative; */
+    margin-top: 0rem ;
+    padding: 0.6rem 0.75rem ;
+    background: white ;
+    border: solid 2px #000;
+    border-radius: 18px ;
+    /* width: var(--w-btn); */
+    height: var(--h-btn) ;
+    color: #000000 ;
+    outline: none; /* Remove outline */
+    display : flex;
+    align-items: center;
+    /* padding-left: none; */
+}
+
+.pf-c-input-group:has(#password-confirm) {
+    /* position: relative; */
+    margin-top: 0rem ;
+    padding: 0.6rem 0.75rem ;
+    background: white ;
+    border: solid 2px #000;
+    border-radius: 18px ;
+    /* width: var(--w-btn); */
+    height: var(--h-btn) ;
+    color: #000000 ;
+    outline: none; /* Remove outline */
+    display : flex;
+    align-items: center;
+    /* padding-left: none; */
 }
