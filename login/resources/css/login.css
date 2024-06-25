@@ -554,7 +554,7 @@ ul#kc-totp-supported-apps {
         /* max-width: none; */
         margin-left: 0;
         margin-right: 0;
-        padding: 20px 10px 30px 10px;
+        padding: 20px 40px 30px 40px;
         border-top: 0;
         box-shadow: 0 0;
     }
@@ -978,7 +978,7 @@ img.icon-back {
         font-size: 1.5rem;
         font-weight: 700;
         font-weight: bold;
-        color: #000000;
+        color: #343435;
     }
 
     .section-caption {
@@ -992,7 +992,7 @@ img.icon-back {
 
 /* set-label-input */
 .set-label-input {
-    color: #000000 !important;
+    color: #343435 !important;
 }
 
 /* when invalid user */
@@ -1022,7 +1022,7 @@ img.icon-back {
 }
 
 .new-password-label-input{
-    color: #000000;
+    color: #343435;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 3px;
@@ -1033,11 +1033,11 @@ img.icon-back {
     margin-top: 0rem ;
     padding: 0.6rem 0.75rem ;
     background: white ;
-    border: solid 2px #000;
+    border: solid 2px #343435;
     border-radius: 18px ;
     /* width: var(--w-btn); */
     height: var(--h-btn) ;
-    color: #000000 ;
+    color: #343435 ;
     outline: none; /* Remove outline */
     display : flex;
     align-items: center;
@@ -1049,11 +1049,11 @@ img.icon-back {
     margin-top: 0rem ;
     padding: 0.6rem 0.75rem ;
     background: white ;
-    border: solid 2px #000;
+    border: solid 2px #343435;
     border-radius: 18px ;
     /* width: var(--w-btn); */
     height: var(--h-btn) ;
-    color: #000000 ;
+    color: #343435 ;
     outline: none; /* Remove outline */
     display : flex;
     align-items: center;
