@@ -477,6 +477,7 @@ ul#kc-totp-supported-apps {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: start;
 }
 
 .login-pf-page .login-pf-brand {
@@ -755,13 +756,8 @@ input::placeholder {
 .reset-password-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-/* .input-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem ;
-} */
+
 .placeholder-Icon {
     padding:0.3rem 0 !important;
     padding-right: 0.5rem !important;
