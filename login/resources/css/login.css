@@ -37,16 +37,18 @@ p.instruction {
 }
 
 .pf-c-button.pf-m-block {
-    background-color: #21C063 !important;
-    color: white !important;
-    display: flex;
-    width: 100% !important;
-    justify-content: center;
-    font-size: 1rem;
-    margin-bottom: 1.875rem !important;
-    align-items: center;
-    flex-direction: column-reverse;
+    font-weight: 700 !important;
+    background: linear-gradient(to right, #0056a9 , #002243 );
+    background-color: #0056a9;
+    border: none;
+    width: 320px;
+    height: 60px;
+    border-radius: 16px;
+    font-size: 20px;
+    color: #FFF;
+    display: block;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .pf-c-input-group input:not([type=checkbox]):not([type=radio]),
@@ -473,11 +475,11 @@ ul#kc-totp-supported-apps {
 }
 
 .form-horizontal .form-group {
-    margin: 1rem 0 0 0;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 }
 
 .login-pf-page .login-pf-brand {
@@ -756,6 +758,7 @@ input::placeholder {
 .reset-password-content {
     display: flex;
     flex-direction: column;
+    align-items: start;
 }
 
 .placeholder-Icon {
@@ -916,9 +919,6 @@ a#kc-current-locale-link {
     --pf-c-form__helper-text--Color: var(--pf-c-form__helper-text--m-error--Color);
 }
 
-.pf-c-input-group {
-    /* margin-bottom: 1rem !important; */
-}
 
 .pf-c-form__helper-text.pf-m-error {
     font-weight: 400;
@@ -1007,7 +1007,7 @@ img.icon-back {
         .set-password-label {
             font-size: 1rem;
             margin-bottom: 2rem;
-            margin-top: 0.5rem;
+            /* margin-top: 0.5rem; */
             font-weight: 400;
         }
 
@@ -1055,3 +1055,12 @@ img.icon-back {
     align-items: center;
     /* padding-left: none; */
 }
+
+.pf-c-input-group span {
+    margin-top: 1.2rem;
+
+    i {
+        display: none;
+    }
+}
+
