@@ -92,7 +92,7 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
         var label = document.createElement("div");
         label.id = criterion.id;
         label.textContent = criterion.text;
-        label.style.color = "red";  // Start with red color
+        label.style.color = "#c3c3c3";  // Start with red color
 
         validationContainer.appendChild(label);
       });
@@ -219,7 +219,7 @@ function updateValidationLabels() {
   var password = document.getElementById("password-new").value;
 
   document.getElementById("min-length").style.color = password.length >= 8 ? "green" : "red";
-  document.getElementById("english-only").style.color = password.length >= 8 && /^[A-Za-z\d!+=\-_@&^%$#]*$/.test(password) ? "green" : "red";
+  document.getElementById("english-only").style.color = password.length >= 8 && /^[A-Za-z\d!+=\-_@&^%$#.,:;/]*$/.test(password) ? "green" : "red";
   document.getElementById("uppercase").style.color = /[A-Z]/.test(password) ? "green" : "red";
   document.getElementById("lowercase").style.color = /[a-z]/.test(password) ? "green" : "red";
   document.getElementById("number").style.color = /\d/.test(password) ? "green" : "red";
