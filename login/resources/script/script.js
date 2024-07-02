@@ -75,6 +75,35 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
 
       confirmPasswordLabel.textContent = "Confirm Password";
       confirmPasswordLabel.classList.add("new-password-label-input");
+
+      // Create validation labels
+      var validationContainer = document.createElement("div");
+      validationContainer.id = "password-validation";
+
+      var criteria = [
+        { id: "english-only", text: "Password must be in English" },
+        { id: "min-length", text: "Have at least 8 letters" },
+        { id: "uppercase", text: "1 uppercase" },
+        { id: "lowercase", text: "1 lowercase" },
+        { id: "number", text: "1 number" }
+      ];
+
+      criteria.forEach(function (criterion) {
+        var label = document.createElement("div");
+        label.id = criterion.id;
+        label.textContent = criterion.text;
+        label.style.color = "red";  // Start with red color
+
+        validationContainer.appendChild(label);
+      });
+
+      passwordLabel.insertAdjacentElement("afterend", validationContainer);
+
+      // Add event listener to update labels on password input
+      var passwordInput = document.getElementById("password-new");
+      passwordInput.addEventListener("input", updateValidationLabels);
+
+
   });
   // set placeholder
 
@@ -183,9 +212,15 @@ function formater(password) {
   var hasNumber = /\d/.test(password);
   var hasLowercase = /[a-z]/.test(password);
   var hasUppercase = /[A-Z]/.test(password);
-  if (hasNumber && hasLowercase && hasUppercase && password.length >= 8) {
-    return true;
-  } else {
-    return false;
-  }
+  return /^[A-Za-z\d!+=\-_@&^%$#]*$/.test(password) && password.length >= 8 && hasNumber && hasLowercase && hasUppercase;
+}
+
+function updateValidationLabels() {
+  var password = document.getElementById("password-new").value;
+
+  document.getElementById("min-length").style.color = password.length >= 8 ? "green" : "red";
+  document.getElementById("english-only").style.color = password.length >= 8 && /^[A-Za-z\d!+=\-_@&^%$#]*$/.test(password) ? "green" : "red";
+  document.getElementById("uppercase").style.color = /[A-Z]/.test(password) ? "green" : "red";
+  document.getElementById("lowercase").style.color = /[a-z]/.test(password) ? "green" : "red";
+  document.getElementById("number").style.color = /\d/.test(password) ? "green" : "red";
 }
