@@ -8,7 +8,7 @@
                 <a href="${url.loginUrl}" class="nav-back">
                     <#--  <i class="icon-back"></i>  -->
                     <img  class="icon-back" src="${url.resourcesPath}/img/left-arrow.png" />
-                    Back to previous page
+                    Back to Login page
                 </a>
             </div>
     </nav>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
-                        <input class="button-login" 
+                        <input class="button-send" 
                                 type="submit" 
                                 value="SEND"/>
                     </div>

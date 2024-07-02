@@ -133,7 +133,7 @@
 
           <#if displayInfo>
               <div id="kc-info" class="${properties.kcSignUpClass!}" style="display:flex">
-              <div class="col-4 col-md-4 col-sm-4" style="background-color:white;height:40px"></div>
+              <div class="" style="background-color:white;"></div>
                   <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!} col-8 col-md-8 col-sm-8"
                   style="text-align: center;
                     font-size: 1.5rem;
