@@ -791,7 +791,6 @@ input:focus {
     color: #FFF;
     display: block;
     font-weight: 500;
-    margin-bottom: 10px;
 }
 .button-send {
     font-weight: 700 !important;
@@ -826,6 +825,13 @@ input:focus {
     height: 2.3rem;
 }
 
+/* Underline or <hr> setting */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #000;
+    /* margin-top: 1rem; */
+}
 
 
 a:hover {
@@ -856,8 +862,11 @@ span {
     border: 1px solid #BD4D4D !important;
 } */
 
+
+/* tag a customization */
 a {
     color: #0056a9;
+    font-size: 1rem;
 }
 
 .login-pf-page {
@@ -905,15 +914,16 @@ a#kc-current-locale-link {
 .forgot-password-group {
     display: flex;
     margin-top: 0.5rem !important;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     width: var(--b-btn);
-    justify-content: start;
+    justify-content: end;
 
 
     .label-forgot {
         margin-right: 1rem;
         font-weight: 400 !important;
     }
+
 }
 
 
@@ -998,6 +1008,7 @@ img.icon-back {
         color: #505050;
         margin-bottom: 2rem;
     }
+
 }
 
 /* set-label-input */
@@ -1078,3 +1089,8 @@ img.icon-back {
     }
 }
 
+.label-register {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #505050;
+}

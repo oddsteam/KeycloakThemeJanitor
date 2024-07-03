@@ -38,6 +38,7 @@
                             </div>
                             <input
                                 tabindex="1"
+                                autocomplete="email"
                                 placeholder="Example@email.com"
                                 type="text"
                                 id="username"
@@ -110,6 +111,15 @@
                         </div>
                         </#if>
                         <button type="submit" class="button-login">LOGIN</button>
+                        <hr>
+                        <div class="register-group">
+                            <div>
+                                <span class="label-register">
+                                Don't have an account?
+                                </span>
+                                <a class="button-register" tabindex="6" href="${url.registrationUrl}">
+                                Request account</a>
+                            </div>
                     </div>
                 </div>
             </div>
