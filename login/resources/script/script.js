@@ -120,7 +120,9 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
 
   document.addEventListener("DOMContentLoaded", function () {
     var passwordInput = document.getElementById("password-new");
+    passwordInput.classList.add("password-icon");
     var password_confirmInput = document.getElementById("password-confirm");
+    password_confirmInput.classList.add("password-icon");
 
     if (passwordInput && password_confirmInput) {
       passwordInput.placeholder = "Password";
