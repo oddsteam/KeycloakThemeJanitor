@@ -117,7 +117,7 @@
                                 <span class="label-register">
                                 Don't have an account?
                                 </span>
-                                <a class="button-register" tabindex="6" href="${url.registrationUrl}">
+                                <a class="button-register" tabindex="6" href="${properties['friendsRequestAccountRedirectUrl']}">
                                 Request account</a>
                             </div>
                     </div>
