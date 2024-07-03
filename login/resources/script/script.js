@@ -60,7 +60,6 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     header.classList.add("reset-new-password");
 
     var Label = document.createElement("div");
-    Label.textContent = "Enter a new password below to reset your password";
     Label.classList.add("set-password-label");
 
     header.appendChild(Label);
@@ -77,31 +76,45 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     confirmPasswordLabel.classList.add("new-password-label-input");
 
     // Create validation labels
+    var form = document.getElementById("kc-passwd-update-form");
     var validationContainer = document.createElement("div");
     validationContainer.id = "password-validation";
+    validationContainer.style.display = "none";
+    validationContainer.style.width = "100%";
+    validationContainer.style.backgroundColor = "#fafafa";
+    validationContainer.style.border = "1px solid #ddd";
+    validationContainer.style.borderRadius = "12px";
+    validationContainer.style.padding = "10px";
+    validationContainer.style.marginBottom = "8px";
+    validationContainer.style.paddingLeft = "20px"
+    validationContainer.style.fontSize = "14px"
+
+
 
     var criteria = [
       { id: "english-only", text: "Password must be in English" },
       { id: "min-length", text: "Have at least 8 letters" },
       { id: "uppercase", text: "1 uppercase" },
       { id: "lowercase", text: "1 lowercase" },
-      { id: "number", text: "1 number" },
+      { id: "number", text: "1 number" }
     ];
 
     criteria.forEach(function (criterion) {
       var label = document.createElement("div");
       label.id = criterion.id;
       label.textContent = criterion.text;
-      label.style.color = "#c3c3c3"; // Start with red color
+      label.style.color = "#c3c3c3";  // Start with red color
 
       validationContainer.appendChild(label);
     });
 
-    passwordLabel.insertAdjacentElement("afterend", validationContainer);
+    confirmPasswordLabel.insertAdjacentElement("beforebegin", validationContainer);
 
-    // Add event listener to update labels on password input
     var passwordInput = document.getElementById("password-new");
+    passwordInput.addEventListener("focus", showValidationContainer);
     passwordInput.addEventListener("input", updateValidationLabels);
+
+
   });
   // set placeholder
 
@@ -157,7 +170,8 @@ function validatePassword_UpdatePassword(event) {
     return false;
   } else if (!formater(passwordValue) || !formater(passwordConfirmValue)) {
     clearError(["password-new", "password-confirm"]);
-    errorMessage = "Invalid format password";
+    errorMessage =
+      "Invalid password format";
     showErrorMessage(passwordConfirm, errorMessage, true);
     return false;
   } else {
@@ -220,20 +234,28 @@ function formater(password) {
 
 function updateValidationLabels() {
   var password = document.getElementById("password-new").value;
+  var validationContainer = document.getElementById("password-validation");
 
-  document.getElementById("min-length").style.color =
-    password.length >= 8 ? "green" : "red";
-  document.getElementById("english-only").style.color =
-    password.length > 0 && /^[A-Za-z\d!+=\-_@&^%$#.,:;/]*$/.test(password)
-      ? "green"
-      : "red";
-  document.getElementById("uppercase").style.color = /[A-Z]/.test(password)
-    ? "green"
-    : "red";
-  document.getElementById("lowercase").style.color = /[a-z]/.test(password)
-    ? "green"
-    : "red";
-  document.getElementById("number").style.color = /\d/.test(password)
-    ? "green"
-    : "red";
+  if (validationContainer) {
+    validationContainer.style.display = "block";
+  }
+
+  document.getElementById("min-length").style.color = password.length >= 8 ? "green" : "#F43A29";
+  document.getElementById("english-only").style.color = password.length > 0 && /^[A-Za-z\d!+=\-_!^()~`@&^%$*#.,:;/]*$/.test(password) ? "green" : "#F43A29";
+  document.getElementById("uppercase").style.color = /[A-Z]/.test(password) ? "green" : "#F43A29";
+  document.getElementById("lowercase").style.color = /[a-z]/.test(password) ? "green" : "#F43A29";
+  document.getElementById("number").style.color = /\d/.test(password) ? "green" : "#F43A29";
+}
+function showValidationContainer() {
+  var validationContainer = document.getElementById("password-validation");
+  if (validationContainer) {
+    validationContainer.style.display = "block";
+  }
+}
+
+function hideValidationContainer() {
+  var validationContainer = document.getElementById("password-validation");
+  if (validationContainer) {
+    validationContainer.style.display = "none";
+  }
 }

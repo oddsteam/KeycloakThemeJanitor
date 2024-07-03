@@ -1089,9 +1089,16 @@ img.icon-back {
         display: none;
     }
 }
+#password-validation div {
+    margin-bottom: 5px;
+}
 
 .label-register {
     font-size: 1rem;
     font-weight: 400;
     color: #505050;
+}
+#password-validation div:before {
+    content: "•";
+    margin-right: 5px;
 }
