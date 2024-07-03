@@ -92,7 +92,7 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
 
 
     var criteria = [
-      { id: "english-only", text: "Password must be in English" },
+      { id: "english-only", text: "Password must be in English or _!@&%$*#" },
       { id: "min-length", text: "Have at least 8 letters" },
       { id: "uppercase", text: "1 uppercase" },
       { id: "lowercase", text: "1 lowercase" },
@@ -241,7 +241,7 @@ function updateValidationLabels() {
   }
 
   document.getElementById("min-length").style.color = password.length >= 8 ? "green" : "#F43A29";
-  document.getElementById("english-only").style.color = password.length > 0 && /^[A-Za-z\d!+=\-_!^()~`@&^%$*#.,:;/]*$/.test(password) ? "green" : "#F43A29";
+  document.getElementById("english-only").style.color = password.length > 0 && /^[A-Za-z\d!+=\_!@&%$*#/]*$/.test(password) ? "green" : "#F43A29";
   document.getElementById("uppercase").style.color = /[A-Z]/.test(password) ? "green" : "#F43A29";
   document.getElementById("lowercase").style.color = /[a-z]/.test(password) ? "green" : "#F43A29";
   document.getElementById("number").style.color = /\d/.test(password) ? "green" : "#F43A29";
