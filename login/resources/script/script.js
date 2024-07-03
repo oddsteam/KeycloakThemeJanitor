@@ -117,7 +117,7 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
 
   document.addEventListener("DOMContentLoaded", function (event) {
     var submitButton = document.querySelector('input[type="submit"]');
-    submitButton.value = "CHANGE PASSWORD";
+    submitButton.value = "Set Password";
     submitButton.classList.add("button-login");
     submitButton.addEventListener("click", validatePassword_UpdatePassword);
     var form = document.getElementById("kc-passwd-update-form");
