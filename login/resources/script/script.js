@@ -59,15 +59,13 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     header.textContent = "Set new password";
     header.classList.add("reset-new-password");
 
-    var Label = document.createElement("div");
-    Label.classList.add("set-password-label");
+    var labelText = document.createElement("div");
+    labelText.classList.add("set-password-label");
 
-    header.appendChild(Label);
+    header.appendChild(labelText);
 
     passwordLabel.insertAdjacentElement("beforebegin", header);
-    var confirmPasswordLabel = document.querySelector(
-      'label[for="password-confirm"]'
-    );
+    var confirmPasswordLabel = document.querySelector('label[for="password-confirm"]');
 
     passwordLabel.textContent = "New Password";
     passwordLabel.classList.add("new-password-label-input");
@@ -79,17 +77,15 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     var form = document.getElementById("kc-passwd-update-form");
     var validationContainer = document.createElement("div");
     validationContainer.id = "password-validation";
-    validationContainer.style.display = "none";
+    validationContainer.style.display = "none"; // Hide initially
     validationContainer.style.width = "100%";
     validationContainer.style.backgroundColor = "#fafafa";
     validationContainer.style.border = "1px solid #ddd";
     validationContainer.style.borderRadius = "12px";
     validationContainer.style.padding = "10px";
     validationContainer.style.marginBottom = "8px";
-    validationContainer.style.paddingLeft = "20px"
-    validationContainer.style.fontSize = "14px"
-
-
+    validationContainer.style.paddingLeft = "20px";
+    validationContainer.style.fontSize = "14px";
 
     var criteria = [
       { id: "english-only", text: "Password must be in English or _!@&%$*#" },
@@ -100,24 +96,33 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     ];
 
     criteria.forEach(function (criterion) {
-      var label = document.createElement("div");
-      label.id = criterion.id;
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = criterion.id;
+      checkbox.disabled = true;
+    
+      var label = document.createElement("label");
+      label.htmlFor = criterion.id;
       label.textContent = criterion.text;
-      label.style.color = "#c3c3c3";  // Start with red color
-
-      validationContainer.appendChild(label);
+    
+      var container = document.createElement("div");
+      container.style.display = "flex"; // Ensure items are displayed in line
+      container.style.alignItems = "center"; // Align items vertically center
+      container.appendChild(checkbox);
+      container.appendChild(label);
+    
+      validationContainer.appendChild(container);
     });
+         
 
     confirmPasswordLabel.insertAdjacentElement("beforebegin", validationContainer);
 
     var passwordInput = document.getElementById("password-new");
     passwordInput.addEventListener("focus", showValidationContainer);
     passwordInput.addEventListener("input", updateValidationLabels);
-
-
   });
-  // set placeholder
 
+  // Set placeholder
   document.addEventListener("DOMContentLoaded", function () {
     var passwordInput = document.getElementById("password-new");
     passwordInput.classList.add("password-icon");
@@ -172,8 +177,7 @@ function validatePassword_UpdatePassword(event) {
     return false;
   } else if (!formater(passwordValue) || !formater(passwordConfirmValue)) {
     clearError(["password-new", "password-confirm"]);
-    errorMessage =
-      "Invalid password format";
+    errorMessage = "Invalid password format";
     showErrorMessage(passwordConfirm, errorMessage, true);
     return false;
   } else {
@@ -185,14 +189,8 @@ function validatePassword_UpdatePassword(event) {
 //for setpassword
 function showErrorMessage(element, message, withWarningIcon) {
   var errorMessageSpan = document.createElement("span");
-  errorMessageSpan.textContent = message;
   errorMessageSpan.textContent = "\u00A0" + message;
-  errorMessageSpan.classList.add(
-    "pf-c-form__helper-text",
-    "pf-m-error",
-    "required",
-    "kc-feedback-text"
-  );
+  errorMessageSpan.classList.add("pf-c-form__helper-text", "pf-m-error", "required", "kc-feedback-text");
   if (withWarningIcon) {
     var warningIcon = document.createElement("i");
     warningIcon.classList.add("fas", "fa-exclamation-circle", "error-icon");
@@ -200,6 +198,7 @@ function showErrorMessage(element, message, withWarningIcon) {
   }
   element.insertAdjacentElement("afterend", errorMessageSpan);
 }
+
 function clearError(elementIds) {
   elementIds.forEach(function (id) {
     var element = document.getElementById(id);
@@ -208,6 +207,7 @@ function clearError(elementIds) {
     }
   });
 }
+
 // for login
 function ValidateLogin(element, message, withWarningIcon) {
   var errorMessageSpan = document.createElement("span");
@@ -242,12 +242,34 @@ function updateValidationLabels() {
     validationContainer.style.display = "block";
   }
 
-  document.getElementById("min-length").style.color = password.length >= 8 ? "green" : "#F43A29";
-  document.getElementById("english-only").style.color = password.length > 0 && /^[A-Za-z\d!+=\_!@&%$*#/]*$/.test(password) ? "green" : "#F43A29";
-  document.getElementById("uppercase").style.color = /[A-Z]/.test(password) ? "green" : "#F43A29";
-  document.getElementById("lowercase").style.color = /[a-z]/.test(password) ? "green" : "#F43A29";
-  document.getElementById("number").style.color = /\d/.test(password) ? "green" : "#F43A29";
+  var minLengthCheckbox = document.getElementById("min-length");
+  var englishOnlyCheckbox = document.getElementById("english-only");
+  var uppercaseCheckbox = document.getElementById("uppercase");
+  var lowercaseCheckbox = document.getElementById("lowercase");
+  var numberCheckbox = document.getElementById("number");
+
+  minLengthCheckbox.checked = password.length >= 8;
+  englishOnlyCheckbox.checked = password.length > 0 && /^[A-Za-z\d!+=\_!@&%$*#/]*$/.test(password);
+  uppercaseCheckbox.checked = /[A-Z]/.test(password);
+  lowercaseCheckbox.checked = /[a-z]/.test(password);
+  numberCheckbox.checked = /\d/.test(password);
+
+  minLengthCheckbox.nextElementSibling.style.color = minLengthCheckbox.checked ? "green" : "#F43A29";
+  minLengthCheckbox.style.accentColor = minLengthCheckbox.checked ?  "green" : "#F43A29";
+  
+  englishOnlyCheckbox.nextElementSibling.style.color = englishOnlyCheckbox.checked ? "green" : "#F43A29";
+  englishOnlyCheckbox.style.accentColor = englishOnlyCheckbox.checked ? "green" : "#F43A29";
+  
+  uppercaseCheckbox.nextElementSibling.style.color = uppercaseCheckbox.checked ? "green" : "#F43A29";
+  uppercaseCheckbox.style.accentColor = uppercaseCheckbox.checked ? "green" : "#F43A29";
+  
+  lowercaseCheckbox.nextElementSibling.style.color = lowercaseCheckbox.checked ? "green" : "#F43A29";
+  lowercaseCheckbox.style.accentColor = lowercaseCheckbox.checked ? "green" : "#F43A29";
+  
+  numberCheckbox.nextElementSibling.style.color = numberCheckbox.checked ? "green" : "#F43A29";
+  numberCheckbox.style.accentColor = numberCheckbox.checked ? "green" : "#F43A29";
 }
+
 function showValidationContainer() {
   var validationContainer = document.getElementById("password-validation");
   if (validationContainer) {
@@ -261,3 +283,4 @@ function hideValidationContainer() {
     validationContainer.style.display = "none";
   }
 }
+

@@ -1100,7 +1100,6 @@ img.icon-back {
 }
 
 #password-validation div:before {
-    content: "•";
     margin-right: 5px;
 }
 
@@ -1110,3 +1109,40 @@ img.icon-back {
     background-size: 27px 26px;
     padding-left: 2rem;
 }
+
+
+#password-validation label::before {
+    content: none; /* ซ่อนจุด (.) ด้านหน้าข้อความใน label */
+  }
+  
+#password-validation .validation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    list-style: none
+  }
+  
+  #password-validation input[type="checkbox"] {
+    display: none; /* ซ่อน checkbox เพราะเราจะใช้ label เป็นตัวแทน */
+  }
+  
+  #password-validation input[type="checkbox"] + label::before {
+    content: '\2715'; /* ใช้ Unicode character ที่เป็น checkmark */
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 8px;
+    color: red; /* สีของ checkmark ขณะที่ checkbox ไม่ถูกติ้ง */
+  }
+  
+  #password-validation input[type="checkbox"]:checked + label::before {
+    content: '\2713'; /* ใช้ Unicode character ที่เป็น checkmark */
+    background-color: green; /* สีพื้นหลังของ label เมื่อ checkbox ถูกติ้ง */
+    border-color: green; /* สีขอบของ label เมื่อ checkbox ถูกติ้ง */
+    color: white; /* สีของ checkmark เมื่อ checkbox ถูกติ้ง */
+  }
