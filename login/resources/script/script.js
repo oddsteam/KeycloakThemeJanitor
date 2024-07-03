@@ -54,61 +54,59 @@ if (window.location.href.indexOf("reset-credentials") > -1) {
 else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
   document.addEventListener("DOMContentLoaded", function () {
     var passwordLabel = document.querySelector('label[for="password-new"]');
-    
+
     var header = document.createElement("div");
     header.textContent = "Set new password";
     header.classList.add("reset-new-password");
-    
+
     var Label = document.createElement("div");
     Label.textContent = "Enter a new password below to reset your password";
     Label.classList.add("set-password-label");
-    
+
     header.appendChild(Label);
-    
+
     passwordLabel.insertAdjacentElement("beforebegin", header);
     var confirmPasswordLabel = document.querySelector(
       'label[for="password-confirm"]'
-      );
+    );
 
-      passwordLabel.textContent = "New Password";
-      passwordLabel.classList.add("new-password-label-input");
+    passwordLabel.textContent = "New Password";
+    passwordLabel.classList.add("new-password-label-input");
 
-      confirmPasswordLabel.textContent = "Confirm Password";
-      confirmPasswordLabel.classList.add("new-password-label-input");
+    confirmPasswordLabel.textContent = "Confirm Password";
+    confirmPasswordLabel.classList.add("new-password-label-input");
 
-      // Create validation labels
-      var validationContainer = document.createElement("div");
-      validationContainer.id = "password-validation";
+    // Create validation labels
+    var validationContainer = document.createElement("div");
+    validationContainer.id = "password-validation";
 
-      var criteria = [
-        { id: "english-only", text: "Password must be in English" },
-        { id: "min-length", text: "Have at least 8 letters" },
-        { id: "uppercase", text: "1 uppercase" },
-        { id: "lowercase", text: "1 lowercase" },
-        { id: "number", text: "1 number" }
-      ];
+    var criteria = [
+      { id: "english-only", text: "Password must be in English" },
+      { id: "min-length", text: "Have at least 8 letters" },
+      { id: "uppercase", text: "1 uppercase" },
+      { id: "lowercase", text: "1 lowercase" },
+      { id: "number", text: "1 number" },
+    ];
 
-      criteria.forEach(function (criterion) {
-        var label = document.createElement("div");
-        label.id = criterion.id;
-        label.textContent = criterion.text;
-        label.style.color = "#c3c3c3";  // Start with red color
+    criteria.forEach(function (criterion) {
+      var label = document.createElement("div");
+      label.id = criterion.id;
+      label.textContent = criterion.text;
+      label.style.color = "#c3c3c3"; // Start with red color
 
-        validationContainer.appendChild(label);
-      });
+      validationContainer.appendChild(label);
+    });
 
-      passwordLabel.insertAdjacentElement("afterend", validationContainer);
+    passwordLabel.insertAdjacentElement("afterend", validationContainer);
 
-      // Add event listener to update labels on password input
-      var passwordInput = document.getElementById("password-new");
-      passwordInput.addEventListener("input", updateValidationLabels);
-
-
+    // Add event listener to update labels on password input
+    var passwordInput = document.getElementById("password-new");
+    passwordInput.addEventListener("input", updateValidationLabels);
   });
   // set placeholder
 
   document.addEventListener("DOMContentLoaded", function () {
-    var passwordInput = document.getElementById("password-new")
+    var passwordInput = document.getElementById("password-new");
     var password_confirmInput = document.getElementById("password-confirm");
 
     if (passwordInput && password_confirmInput) {
@@ -119,8 +117,8 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
 
   document.addEventListener("DOMContentLoaded", function (event) {
     var submitButton = document.querySelector('input[type="submit"]');
-    submitButton.value = "CHANGE PASSWORD";
-    submitButton.classList.add("button-login")
+    submitButton.value = "Set Password";
+    submitButton.classList.add("button-login");
     submitButton.addEventListener("click", validatePassword_UpdatePassword);
     var form = document.getElementById("kc-passwd-update-form");
     if (form) {
@@ -159,8 +157,7 @@ function validatePassword_UpdatePassword(event) {
     return false;
   } else if (!formater(passwordValue) || !formater(passwordConfirmValue)) {
     clearError(["password-new", "password-confirm"]);
-    errorMessage =
-      "Password must be in English and have at least 8 letters, 1 uppercase, 1 lowercase, and 1 number";
+    errorMessage = "Invalid format password";
     showErrorMessage(passwordConfirm, errorMessage, true);
     return false;
   } else {
@@ -212,15 +209,31 @@ function formater(password) {
   var hasNumber = /\d/.test(password);
   var hasLowercase = /[a-z]/.test(password);
   var hasUppercase = /[A-Z]/.test(password);
-  return /^[A-Za-z\d!+=\-_@&^%$#]*$/.test(password) && password.length >= 8 && hasNumber && hasLowercase && hasUppercase;
+  return (
+    /^[A-Za-z\d!+=\-_@&^%$#]*$/.test(password) &&
+    password.length >= 8 &&
+    hasNumber &&
+    hasLowercase &&
+    hasUppercase
+  );
 }
 
 function updateValidationLabels() {
   var password = document.getElementById("password-new").value;
 
-  document.getElementById("min-length").style.color = password.length >= 8 ? "green" : "red";
-  document.getElementById("english-only").style.color = password.length >= 8 && /^[A-Za-z\d!+=\-_@&^%$#.,:;/]*$/.test(password) ? "green" : "red";
-  document.getElementById("uppercase").style.color = /[A-Z]/.test(password) ? "green" : "red";
-  document.getElementById("lowercase").style.color = /[a-z]/.test(password) ? "green" : "red";
-  document.getElementById("number").style.color = /\d/.test(password) ? "green" : "red";
+  document.getElementById("min-length").style.color =
+    password.length >= 8 ? "green" : "red";
+  document.getElementById("english-only").style.color =
+    password.length > 0 && /^[A-Za-z\d!+=\-_@&^%$#.,:;/]*$/.test(password)
+      ? "green"
+      : "red";
+  document.getElementById("uppercase").style.color = /[A-Z]/.test(password)
+    ? "green"
+    : "red";
+  document.getElementById("lowercase").style.color = /[a-z]/.test(password)
+    ? "green"
+    : "red";
+  document.getElementById("number").style.color = /\d/.test(password)
+    ? "green"
+    : "red";
 }

@@ -1024,16 +1024,17 @@ img.icon-back {
 
 /* -------- Set new password---------- */
 .reset-new-password {
-    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: #343435;
 
         .set-password-label {
             font-size: 1rem;
             margin-bottom: 2rem;
-            /* margin-top: 0.5rem; */
+            margin-top: 1rem;
             font-weight: 400;
+            color: #505050;
         }
 
         label {
