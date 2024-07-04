@@ -83,9 +83,10 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     validationContainer.style.border = "1px solid #ddd";
     validationContainer.style.borderRadius = "12px";
     validationContainer.style.padding = "10px";
-    validationContainer.style.marginBottom = "8px";
+    validationContainer.style.margin = "8px 0px";
     validationContainer.style.paddingLeft = "20px";
     validationContainer.style.fontSize = "14px";
+    validationContainer.style.color = "red";
 
     var criteria = [
       { id: "english-only", text: "Password must be in English or _!@&%$*#" },
@@ -118,6 +119,7 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     confirmPasswordLabel.insertAdjacentElement("beforebegin", validationContainer);
 
     var passwordInput = document.getElementById("password-new");
+    passwordInput.addEventListener("click", showValidationContainer);
     passwordInput.addEventListener("focus", showValidationContainer);
     passwordInput.addEventListener("input", updateValidationLabels);
   });
@@ -256,7 +258,6 @@ function updateValidationLabels() {
 
   minLengthCheckbox.nextElementSibling.style.color = minLengthCheckbox.checked ? "green" : "#F43A29";
   minLengthCheckbox.style.accentColor = minLengthCheckbox.checked ?  "green" : "#F43A29";
-  minLengthCheckbox.style.textDecoration = minLengthCheckbox.checked ? "line-through" : "none";
   
   englishOnlyCheckbox.nextElementSibling.style.color = englishOnlyCheckbox.checked ? "green" : "#F43A29";
   englishOnlyCheckbox.style.accentColor = englishOnlyCheckbox.checked ? "green" : "#F43A29";
