@@ -74,8 +74,8 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     confirmPasswordLabel.classList.add("new-password-label-input");
 
     // Create validation labels
-    var form = document.getElementById("kc-passwd-update-form");
-    var validationContainer = document.createElement("div");
+    let form = document.getElementById("kc-passwd-update-form");
+    let validationContainer = document.createElement("div");
     validationContainer.id = "password-validation";
     validationContainer.style.display = "none"; // Hide initially
     validationContainer.style.width = "100%";
@@ -88,7 +88,7 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     validationContainer.style.fontSize = "14px";
     validationContainer.style.color = "red";
 
-    var criteria = [
+    const criteria = [
       { id: "english-only", text: "Password must be in English or _!@&%$*#" },
       { id: "min-length", text: "Have at least 8 letters" },
       { id: "uppercase", text: "1 uppercase" },
@@ -118,9 +118,8 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
 
     confirmPasswordLabel.insertAdjacentElement("beforebegin", validationContainer);
 
-    var passwordInput = document.getElementById("password-new");
+    let passwordInput = document.getElementById("password-new");
     passwordInput.addEventListener("click", showValidationContainer);
-    passwordInput.addEventListener("focus", showValidationContainer);
     passwordInput.addEventListener("input", updateValidationLabels);
   });
 
@@ -138,11 +137,11 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
   });
 
   document.addEventListener("DOMContentLoaded", function (event) {
-    var submitButton = document.querySelector('input[type="submit"]');
+    let submitButton = document.querySelector('input[type="submit"]');
     submitButton.value = "Set Password";
     submitButton.classList.add("button-login");
     submitButton.addEventListener("click", validatePassword_UpdatePassword);
-    var form = document.getElementById("kc-passwd-update-form");
+    let form = document.getElementById("kc-passwd-update-form");
     if (form) {
       form.addEventListener("submit", function (event) {
         if (!validatePassword_UpdatePassword()) {
@@ -237,8 +236,8 @@ function formater(password) {
 }
 
 function updateValidationLabels() {
-  var password = document.getElementById("password-new").value;
-  var validationContainer = document.getElementById("password-validation");
+  let password = document.getElementById("password-new").value;
+  let validationContainer = document.getElementById("password-validation");
 
   if (validationContainer) {
     validationContainer.style.display = "block";
@@ -273,14 +272,14 @@ function updateValidationLabels() {
 }
 
 function showValidationContainer() {
-  var validationContainer = document.getElementById("password-validation");
+  let validationContainer = document.getElementById("password-validation");
   if (validationContainer) {
     validationContainer.style.display = "block";
   }
 }
 
 function hideValidationContainer() {
-  var validationContainer = document.getElementById("password-validation");
+  let validationContainer = document.getElementById("password-validation");
   if (validationContainer) {
     validationContainer.style.display = "none";
   }
