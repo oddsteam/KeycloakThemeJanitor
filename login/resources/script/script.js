@@ -256,6 +256,7 @@ function updateValidationLabels() {
 
   minLengthCheckbox.nextElementSibling.style.color = minLengthCheckbox.checked ? "green" : "#F43A29";
   minLengthCheckbox.style.accentColor = minLengthCheckbox.checked ?  "green" : "#F43A29";
+  minLengthCheckbox.style.textDecoration = minLengthCheckbox.checked ? "line-through" : "none";
   
   englishOnlyCheckbox.nextElementSibling.style.color = englishOnlyCheckbox.checked ? "green" : "#F43A29";
   englishOnlyCheckbox.style.accentColor = englishOnlyCheckbox.checked ? "green" : "#F43A29";

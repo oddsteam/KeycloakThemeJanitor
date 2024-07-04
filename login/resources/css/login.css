@@ -1127,12 +1127,10 @@ img.icon-back {
   }
   
   #password-validation input[type="checkbox"] + label::before {
-    content: '\2715'; /* ใช้ Unicode character ที่เป็น checkmark */
+    content: '\2715'; /* ใช้ Unicode character ที่เป็น cross mark */
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+    width: 1rem;
+    height: 1rem;
     cursor: pointer;
     text-align: center;
     line-height: 16px;
@@ -1141,8 +1139,6 @@ img.icon-back {
   }
   
   #password-validation input[type="checkbox"]:checked + label::before {
-    content: '\2713'; /* ใช้ Unicode character ที่เป็น checkmark */
-    background-color: green; /* สีพื้นหลังของ label เมื่อ checkbox ถูกติ้ง */
-    border-color: green; /* สีขอบของ label เมื่อ checkbox ถูกติ้ง */
-    color: white; /* สีของ checkmark เมื่อ checkbox ถูกติ้ง */
+    content: '\2713'; /* ใช้ Unicode character ที่เป็น check mark */
+    color: green; /* สีของ checkmark เมื่อ checkbox ถูกติ้ง */
   }
