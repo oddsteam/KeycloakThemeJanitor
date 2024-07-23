@@ -111,16 +111,7 @@
                         </div>
                         </#if>
                         <button type="submit" class="button-login">LOGIN</button>
-                        <hr>
-                        <div class="register-group">
-                            <div>
-                                <span class="label-register">
-                                Don't have an account?
-                                </span>
-                                <a class="button-register" tabindex="6" href="${properties['friendsRequestAccountRedirectUrl']}">
-                                Request account</a>
-                            </div>
-                    </div>
+
                 </div>
             </div>
         </div>
