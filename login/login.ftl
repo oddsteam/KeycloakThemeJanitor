@@ -1,11 +1,18 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password'); section>
 <#if section = "form">
-    <form id="kc-form-login" class="${properties.kcFormClass!} onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+    <form id="kc-form-login" class="${properties.kcFormClass!}" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
         <div class="content">
             <div>
-                <div class="input-group mt-1rem">
-
+                <nav class="navbar">
+                    <div class="navbar-container">
+                        <a href="javascript:window.history.back()" class="nav-back">
+                            <#--  <i class="icon-back"></i>  -->
+                            <img  class="icon-back" src="${url.resourcesPath}/img/left-arrow.png" />
+                            Back
+                        </a>
+                    </div>
+                </nav>
                     <#--
                     <label class="label-input">
                     <#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("เข้าสู่ระบบ")}<#else>${msg("เข้าสู่ระบบ")}</#if>
@@ -18,8 +25,7 @@
 
                     </div>
                     
-
-                    
+                <div class="input-group mt-1rem">
                     <div>
                         <label for="username" class="label-input-top">Email</label>
                     </div>
