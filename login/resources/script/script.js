@@ -144,8 +144,12 @@ else if (window.location.href.indexOf("execution=UPDATE_PASSWORD") > -1) {
     let form = document.getElementById("kc-passwd-update-form");
     if (form) {
       form.addEventListener("submit", function (event) {
-        if (!validatePassword_UpdatePassword()) {
-          event.preventDefault();
+        if (validatePassword_UpdatePassword()) {          
+          setTimeout(function() {
+            window.location.href = "https://friends.odds.team/backtologin";
+          }, 100);
+        } else {
+          event.preventDefault(); // Prevent form submission if validation fails
         }
       });
     }
