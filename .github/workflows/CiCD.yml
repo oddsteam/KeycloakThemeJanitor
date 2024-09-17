@@ -23,7 +23,8 @@ jobs:
             key: ${{ secrets.SSH_PRIVATE_ODDS_CLOUD_KEY }}
             port: 22
             script: |
+              export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
               cd ~/keycloak/KeycloakThemeJanitor
               git pull
               rm -rf ~/keycloak/KeycloakThemeJanitor/out
-              /home/linuxbrew/.linuxbrew/bin/npm run build:jar
+              npm run build:jar
