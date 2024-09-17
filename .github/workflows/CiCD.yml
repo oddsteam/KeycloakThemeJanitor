@@ -26,5 +26,4 @@ jobs:
               cd ~/keycloak/KeycloakThemeJanitor
               git pull
               rm -rf ~/keycloak/KeycloakThemeJanitor/out
-              npm run build:jar
-              
+              /home/linuxbrew/.linuxbrew/bin/npm run build:jar
