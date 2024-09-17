@@ -1,0 +1,27 @@
+name: CI/CD Workflow for deploy themes keycloak
+
+on: 
+  push:
+    branches: [ main ]
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Setup Pritunl Profile and Start VPN Connection
+        uses: nathanielvarona/pritunl-client-github-action@v1
+        with:
+          profile-file: ${{ secrets.PRITUNL_PROFILE_FILE }}
+          profile-pin: ${{ secrets.PRITUNL_PROFILE_PIN }}
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_ODDS_CLOUD_KEY }}
+
+      - name: Deploy themes keycloak
+        run: |
+          rm  ~/KeycloakthemeJanitor/out/janitor.jar
+          git pull
+          npm run build:jar
