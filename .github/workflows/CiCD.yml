@@ -15,17 +15,16 @@ jobs:
           profile-file: ${{ secrets.PRITUNL_PROFILE_FILE }}
           profile-pin: ${{ secrets.PRITUNL_PROFILE_PIN }}
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
+      - name: Deploy to Remote Server
+        uses: appleboy/ssh-action@v0.1.5
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_ODDS_CLOUD_KEY }}
-
-
-      - name: Deploy themes keycloak
-        run: |
-          ssh user@server << 'EOF'
-          cd ~/keycloak/KeycloakThemeJanitor
-          git pull 
-          rm ~/keycloak/KeycloakThemeJanitor/out/janitor.jar
-          npm run build:jar
-          EOF
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USER }}
+            key: ${{ secrets.SSH_PRIVATE_ODDS_CLOUD_KEY }}
+            port: 22
+            script: |
+              cd ~/keycloak/KeycloakThemeJanitor
+              git pull
+              rm -rf ~/keycloak/KeycloakThemeJanitor/out
+              npm run build:jar
+              
